@@ -1,0 +1,73 @@
+<<<<<<< HEAD
+=======
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+>>>>>>> 5866c71 (Initial commit: Production ready App with Kotlin)
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+<<<<<<< HEAD
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.aab
+*.apk
+output-metadata.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+=======
+# IntelliJ/Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+>>>>>>> 5866c71 (Initial commit: Production ready App with Kotlin)
+
+# Keystore files
+*.jks
+*.keystore
+
+<<<<<<< HEAD
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
+=======
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Log files
+*.log
+>>>>>>> 5866c71 (Initial commit: Production ready App with Kotlin)
