@@ -4,20 +4,20 @@ Ky diagram detajon shtresat (Clean Architecture) e rekomanduara nga roadmap-i i 
 
 ```mermaid
 graph TD
-    subgraph UI Layer
+    subgraph UI_Layer [UI Layer]
         UI_Dash[Dashboard Screen]
         UI_Ins[Insights Screen]
         UI_Prov[Provisioning Screen]
         VM[ViewModels<br>StateFlow, RoomPresenceState]
     end
 
-    subgraph Domain Layer
+    subgraph Domain_Layer [Domain Layer]
         UC[Use Cases<br>GetLiveFeed, ManageRoomPresence...]
         Models[Domain Models<br>NoiseReading, DeviceStatus...]
         Repo_Interfaces[Repository Interfaces]
     end
 
-    subgraph Data Layer
+    subgraph Data_Layer [Data Layer]
         subgraph Remote
             Ktor[Ktor REST/WS Client]
             Repo_Remote[Remote Repositories]
@@ -37,9 +37,12 @@ graph TD
     UI_Prov --> VM
     VM --> UC
     UC --> Repo_Interfaces
-    Repo_Interfaces <|-- Repo_Remote
-    Repo_Interfaces <|-- Repo_Local
-    Repo_Interfaces <|-- Repo_Ble
+    
+    %% Use standard arrows for Flowcharts
+    Repo_Remote --> Repo_Interfaces
+    Repo_Local --> Repo_Interfaces
+    Repo_Ble --> Repo_Interfaces
+    
     Repo_Local --> RoomDB
     Repo_Remote --> Ktor
     Repo_Ble --> BLE
